@@ -51,6 +51,9 @@ Preview → Explicit Confirmation → Execution
 
 All supported LLMs conform to a **single shared interface**, ensuring the agent runtime remains completely unaware of the underlying model.
 
+
+This design mirrors how Onebeam/Base44-style platforms handle model churn safely.
+
 ```python
 class LLMProvider:
     def generate_structured_output(
@@ -61,3 +64,7 @@ class LLMProvider:
         output_schema: dict
     ) -> dict:
         pass
+
+        
+
+
